@@ -1,0 +1,178 @@
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003 David J. Grant <dgrant@ieee.org> http://www.davidgrant.ca
+% (c) 2007 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+% (c) 2009-2012 Derek R. Hildreth <derek@derekhildreth.com> http://www.derekhildreth.com 
+%This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/1.0/ or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.
+
+% GENERAL NOTE:  There may be some notes specific to myself.  If you're only interested in my LaTeX source or it doesn't make sense, please disregard it.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage[pdftex]{hyperref}
+\hypersetup{
+    colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=mygreylink     % can put red here to better visualize the links
+}
+\urlstyle{same}
+\definecolor{mygrey}{gray}{.85}
+\definecolor{mygreylink}{gray}{.30}
+\textheight=9.0in
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{0.375in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-.375in}
+\addtolength{\textheight}{0.75in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{6.5in}{l@{\extracolsep{\fill}}r}
+		\textbf{#1} & #2 \\
+		\textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
+
+%-----------------------------------------------------------
+%General Resume Tips
+%   No periods!  Technically, nothing in this document is a full sentence.
+%   Use parallelism by ending key words with the same thing,  i.e. "Coordinated; Designed; Communicated".
+%   More tips on bottom of this LaTeX document.
+%-----------------------------------------------------------
+
+\begin{document}
+
+\newcommand{\mywebheader}{
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+	\textbf{{\LARGE Nathaniel Nguyen}} & \href{mailto:nnguyen939@gmail.com}{nnguyen939@gmail.com}\\
+	{\footnotesize \texttt{{120 202nd ST SE Bothell WA 98012}}} & 
+	{Cell:  206.393.8363}
+	\end{tabular*}
+\\
+\vspace{0.1in}}
+
+% CHANGE HEADER SOURCE HERE
+\mywebheader
+
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{{Skills}}
+	\begin{description}
+		\item[Technologies:] { \footnotesize Ada, C/C++, C\#, Java, Python, MySQL, Regex, Unix Shell, {\LaTeX}, GIT, Mecurial, JSON, XML, Maven, Gnu Make}
+		\item[Computer and OS:] { \footnotesize Linux, Windows, Mac OS X}
+		\item[Software:]{\footnotesize
+			{MS Visual Studio},
+			{Eclipse IDE},
+			{Vi/Vim}
+} 
+		\item[Projects:] {\footnotesize 
+							\item Blitz Kernel
+								\begin{itemize}
+									\resitem{Developed a kernel for the Blitz's architecture for an operating system class}
+									\resitem{Implemented system calls such as read, write, fork, and exec}
+									\resitem{Implemented a simple serial driver}
+								\end{itemize}
+							\item Mini-Unix Shell
+								\begin{itemize}
+									\resitem{Developed a working bash-like shell in Unix for a class}
+									\resitem{Implemented features such as pipes and redirection}
+									\resitem{Developed in C}
+									\resitem{Used Make and CVS to manage and build the project}
+								\end{itemize}
+								
+							\item LizardTech's ClipZipShip Feature in GeoServer
+								\begin{itemize}
+									\resitem{Developed a web application to save selected regions of raster images in multiple format and size}
+									\resitem{Developed in Java}
+									\resitem{Used Maven and Mecurial to manage the project}
+								\end{itemize}
+							\item Blackjack Server and Client
+								\begin{itemize}
+									\resitem{Develope a server and client for a Blackgame that is able to run against/with other class member's server/client}
+									\resitem{Used sockets to communicate between different clients and servers}
+									\resitem{Developed in Python}
+								\end{itemize}
+						}
+			\item[Others:] {\footnotesize OO programming, functional programming, agile development}
+	\end{description} % End Skills list
+	
+%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Experience}
+	\begin{itemize}
+		\item 
+			\ressubheading{{LizardTech }}{Seattle, WA}{Intern}{Sept. 2012 -- Jun. 2013}
+
+
+	\end{itemize}  % End Experience list	
+	
+%%%%%%%%%%%%%%%%%%%%%%	
+\resheading{Education}
+	\begin{itemize}
+		\item
+			\ressubheading{{Western Washington University}}{Bellingham, WA}{{Bachelor of Science in Computer Engineering}; {GPA:3.00}}{Sept. 2010 -- Jun. 2013}
+			
+		\item
+			\ressubheading{{Edmonds Community College}}{Lynnwood, WA}{{Associate in Science}; {GPA:3.00}}{Sept. 2008 -- Jun. 2010}
+
+	\end{itemize} % End Education list
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% GENERAL RESUME NOTES %
+%%%%%%%%%%%%%%%%%%%%%%%%
+Need to brush up on the skills section?  Here are some really good ideas:
+
+- Communication: The ability to express and interpret ideas and convey knowledge. 
+Skills like speaking effectively, writing concisely, listening attentively, expressing ideas, 
+reporting information, editing, interviewing, and facilitating group discussion. 
+ 
+- Research and Planning: The ability to search for specific knowledge and formulate a 
+program for a definite course of action. Skills like forecasting, predicting, identifying 
+issues, finding alternatives, gathering information, solving problems, setting goals, 
+extracting information, and developing strategies. 
+ 
+- Human Relations: The ability to apply interpersonal skills to resolve conflict, relate to 
+people, and help people. Skills like providing support for others, listening, delegating 
+with respect, representing others, asserting, developing rapport, and perceiving 
+feelings. 
+ 
+- Management, Organization, Leadership: The ability to supervise others and guide 
+individuals and groups towards the completion of tasks. Skills like managing groups, 
+selling ideas, making decisions, managing conflict, coordinating tasks, teaching, 
+enlisting help. 
+
+Source: 
+http://www.squawkfox.com/2009/03/08/6-action-words-that-make-your-resume-rock/
+
+Other Resources: 
+http://www.tvmier.com/Resume_Education.html
+
